@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .navbar {
+            background-color: #d32f2f;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .hero {
+            text-align: center;
+            padding: 50px;
+            background: url('https://wallpaperaccess.com/full/3692914.jpg') center/cover;
+            color: white;
+        }
+        .menu, .reservation {
+            text-align: center;
+            padding: 20px;
+        }
+        .menu-item {
+            background: white;
+            padding: 15px;
+            margin: 10px;
+            display: inline-block;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .reservation {
+            padding: 40px;
+            color: white;
+            background: url('http://media.architecturaldigest.com/photos/572a34ffe50e09d42bdfb5e0/master/pass/japanese-restaurants-la-01.jpg') center/cover;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: brightness(1.1) contrast(1.2);
+        }
+        .reservation-form {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        input, textarea, button {
+            width: 100%;
+            margin: 5px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1>Delicious Bites</h1>
+        <div>
+            <a href="#menu" style="color: white; text-decoration: none; margin: 0 10px;">Menu</a>
+            <a href="#reservation" style="color: white; text-decoration: none; margin: 0 10px;">Reservation</a>
+        </div>
+    </div>
+    <div class="hero">
+        <h2>Welcome to Delicious Bites</h2>
+        <p>Experience the best flavors in town</p>
+    </div>
+    <div id="menu" class="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-item">Pasta</div>
+        <div class="menu-item">Pizza</div>
+        <div class="menu-item">Burger</div>
+        <div class="menu-item">Sushi</div>
+        <div class="menu-item">Steak</div>
+        <div class="menu-item">Tacos</div>
+        <div class="menu-item">Salad</div>
+        <div class="menu-item">Sandwich</div>
+        <div class="menu-item">Soup</div>
+        <div class="menu-item">Fries</div>
+        <div class="menu-item">Fresh Juice</div>
+        <div class="menu-item">Smoothie</div>
+        <div class="menu-item">Iced Tea</div>
+        <div class="menu-item">Coffee</div>
+    </div>
+    <div id="reservation" class="reservation">
+        <h2>Make a Reservation</h2>
+        <form class="reservation-form" id="reservationForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Special Requests"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById("reservationForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const name = document.getElementById("name").value;
+            alert(`Reservation request sent by ${name}`);
+        });
+    </script>
+</body>
+</html>
